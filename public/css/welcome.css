@@ -1,0 +1,21 @@
+body {
+    background-color: #FFC700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    max-width: 1800px;
+}
+
+.paragraph-gap {
+    margin-top: 250px;
+}
+
+img {
+    width: 370px;
+    height: auto;
+}
+
+#btn-login {
+    color: #FFC700;
+}

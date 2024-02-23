@@ -1,0 +1,46 @@
+body {
+    background-color: #FFC700;
+    font-family: 'Poppins', sans-serif;
+}
+
+#btn-modal {
+    margin-left: 830px;
+}
+
+#logout {
+    margin-top: 370px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 280px;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar p {
+    color: #fc8d25;
+}
+
+.sidebar img {
+    height: auto;
+    width: 80px;
+    margin-left: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+}
