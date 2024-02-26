@@ -28,9 +28,6 @@
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="d-flex me-4">
-                        <a class="nav-link active fw-semibold" aria-current="page" href="#">Home</a>
-                        <a class="nav-link active fw-semibold" href="#">About</a>
-                        <a class="nav-link active fw-semibold" href="#">Contact</a>
                     </div>
                     <div class="d-flex align-items-center">
                         <div>

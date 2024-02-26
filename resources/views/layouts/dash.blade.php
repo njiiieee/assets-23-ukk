@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -25,7 +26,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-end me-3">
             <p class="m-0 me-3" style="color:rgb(100, 100, 100)">
-                <a href="/profile" class="link-offset-2 link-underline link-underline-opacity-0 text-dark">
+                <a href="{{url('profile')}}" class="link-offset-2 link-underline link-underline-opacity-0 text-dark">
                     {{auth()->user()->name}}
                     <div class="d-flex align-items-center">
                         <img src="{{ asset('img/back.jpg') }}" class="rounded-circle" style="width: 45px">
@@ -67,7 +68,7 @@
             </li>
         </ul>
         <ul class="ms-5" id="logout">
-            <li class="sidebar-item active fs-5 " style="margin-top: 35rem">
+            <li class="sidebar-item active fs-5 " style="margin-top: 33rem">
                 <a href="{{url('logout')}}" class="sidebar-link" style="color: rgb(252, 82, 82);">
                     <i class="bi bi-box-arrow-in-left"></i>
                     <span class="ms-2">Log Out</span>
@@ -76,6 +77,7 @@
         </ul>
     </div>
     {{-- End Sidebar --}}
+
     <div id="app">
         <main class="py-4">
             @yield('content')
