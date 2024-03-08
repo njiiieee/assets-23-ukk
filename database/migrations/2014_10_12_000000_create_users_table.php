@@ -19,6 +19,9 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('level');
+            $table->string('alamat')->nullable();
+            $table->date('tglahir')->nullable();
+            $table->enum('gender', ['L', 'P'])->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -26,21 +26,21 @@
                 <div class="col px-0">
                     <div class="card" style="width: 37rem; margin-left: 5rem">
                         <div class="card-body">
-                                <div class="form-group mb-4">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" name="name" id="name" class="form-control"
-                                        placeholder="Your Name" value="{{ auth()->user()->name }}">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="text" name="email" id="email" class="form-control"
-                                        placeholder="Your Email" value="{{ auth()->user()->email }}">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="phone" class="form-label">Username</label>
-                                    <input type="text" name="phone" id="phone" class="form-control"
-                                        placeholder="Your Phone" value="{{ auth()->user()->username }}">
-                                </div>
+                            <div class="form-group mb-4">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" name="name" id="name" class="form-control"
+                                    placeholder="Your Name" value="{{ auth()->user()->name }}">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" name="email" id="email" class="form-control"
+                                    placeholder="Your Email" value="{{ auth()->user()->email }}">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="phone" class="form-label">Username</label>
+                                <input type="text" name="phone" id="phone" class="form-control"
+                                    placeholder="Your Phone" value="{{ auth()->user()->username }}">
+                            </div>
                         </div>
                     </div>
                 </div>

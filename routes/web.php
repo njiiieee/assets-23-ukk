@@ -1,10 +1,15 @@
 <?php
 
+use App\Models\Book;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Models\Peminjaman;
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,24 +50,61 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
+Route::get('/akun-user', function () {
+    return view('admin.daftar');
+});
+
 Route::get('/search', function () {
-    return view('search');
+
+    $books = Book::with(["pinjaman"])->orderby('created_at', 'DESC')->get();
+    return view('search', compact('books'));
 });
 
 Route::get('/pinjam', function () {
-    return view('pinjam');
+    $books = Book::all();
+
+    return view('pinjam', compact("books"));
+});
+
+Route::post('/pinjam', function(Request $request) {
+    $credentials = $request->validate([
+        "id_book" => ["required", "numeric"],
+        "tanggal" => ["required", "date"],
+    ]);
+    $credentials["status"] = "N";
+    $credentials["id_user"] = auth()->user()->id;
+    $book = Book::firstWhere("id", $credentials["id_book"]);
+
+    if ($book->stock <= 0) return redirect("/pinjaman");
+
+    Peminjaman::create($credentials);
+
+    return redirect("/pinjaman");
+});
+
+Route::get('/pinjaman', function () {
+    $peminjaman = Peminjaman::with(["book"])->where("id_user", auth()->user()->id)->get();
+
+    return view('datapinjam', ["peminjaman" => $peminjaman]);
 });
 
 Route::get('/kembali', function () {
-    return view('kembali');
+    $peminjaman = Peminjaman::with(["user", "book"])->get();
+
+    return view('admin.kembali', compact("peminjaman"));
 });
 
-Route::get('/profile', function () {
-    return view('profile');
+Route::get('/profile-admin', function () {
+    return view('admin.profileadmin');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/profile', [UserController::class, "edit"]);
+
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
-Route::resource('/posts', \App\Http\Controllers\PostController::class);
+Route::resource('/koleksi-buku', BookController::class);
+
+Route::put('/koleksi-buku/kembalikan/{peminjaman:id}', [BookController::class, "kembalikan"]);
+

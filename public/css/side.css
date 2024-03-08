@@ -8,12 +8,12 @@ body {
 }
 
 #logout {
-    margin-top: 370px;
+    margin-top: 320px;
 }
 
 .sidebar {
     height: 100%;
-    width: 280px;
+    width: 240px;
     background-color: #333;
     position: fixed;
     left: 0;

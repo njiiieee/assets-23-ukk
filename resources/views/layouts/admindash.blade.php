@@ -26,7 +26,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-end me-3">
             <p class="m-0 me-3" style="color:rgb(100, 100, 100)">
-                <a href="/user" class="link-offset-2 link-underline link-underline-opacity-0 text-dark">
+                <a href="/admin" class="link-offset-2 link-underline link-underline-opacity-0 text-dark">
                     {{auth()->user()->name}}
                     <div class="d-flex align-items-center">
                         <img src="{{ asset('img/back.jpg') }}" class="rounded-circle" style="width: 45px">
@@ -49,15 +49,15 @@
         </div>
         <ul class="ms-4" style="margin-top: 5rem">
             <li class="sidebar-item active mt-3 fs-5 ">
-                <a href="{{{ url('/search') }}}" class="sidebar-link" style="color: rgb(151, 151, 151);">
-                    <i class="bi bi-search"></i>
-                    <span class="ms-2">Cari Buku</span>
+                <a href="{{{ url('/koleksi-buku') }}}" class="sidebar-link" style="color: rgb(151, 151, 151);">
+                    <i class="bi bi-book"></i>
+                    <span class="ms-2">Daftar Buku</span>
                 </a>
             </li>
-            <li class="sidebar-item active mt-3 fs-5 ">
-                <a href="{{{ url('/pinjaman') }}}" class="sidebar-link" style="color: rgb(151, 151, 151);">
-                    <i class="bi bi-handbag"></i>
-                    <span class="ms-2">Pinjamanmu</span>
+             <li class="sidebar-item active mt-3 fs-5 ">
+                <a href="{{{ url('/kembali') }}}" class="sidebar-link" style="color: rgb(151, 151, 151);">
+                    <i class="bi bi-bag-check"></i>
+                    <span class="ms-2">Pengembalian</span>
                 </a>
             </li>
         </ul>

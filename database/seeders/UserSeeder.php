@@ -14,34 +14,38 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = [
+        User::insert([
             [
                 'username' => 'admin',
-                'name' => 'AkunAdmin',
+                'name' => 'IniAdmin',
                 'email' => 'admin@gmail.com',
                 'level' => 'admin',
-                'password' => Hash::make('123456')
+                'password' => Hash::make('password'),
+                'alamat' => 'JL.ManggaDua',
+                'gender' => 'L',
+                'tglahir' => now()->format("Y-m-d"),
             ],
 
             [
-                'username' => 'user1',
-                'name' => 'AkunUser1',
-                'email' => 'user1@gmail.com',
+                'username' => 'user',
+                'name' => 'IniUser',
+                'email' => 'user@gmail.com',
                 'level' => 'user',
-                'password' => Hash::make('123456')
+                'password' => Hash::make('password'),
+                'alamat' => 'JL.ManggaDua',
+                'gender' => 'L',
+                'tglahir' => now()->format("Y-m-d"),
             ],
             [
-                'username' => 'user2',
-                'name' => 'AkunUser2',
-                'email' => 'user2@gmail.com',
-                'level' => 'user',
-                'password' => Hash::make('123456')
+                'username' => 'petugas',
+                'name' => 'Inipetugas',
+                'email' => 'petugas@gmail.com',
+                'level' => 'petugas',
+                'password' => Hash::make('password'),
+                'alamat' => 'JL.ManggaDua',
+                'gender' => 'L',
+                'tglahir' => now()->format("Y-m-d"),
             ],
-
-        ];
-
-        foreach ($user as $key => $value) {
-            User::create($value);
-        }
+        ]);
     }
 }

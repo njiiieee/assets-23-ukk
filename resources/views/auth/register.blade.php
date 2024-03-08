@@ -4,7 +4,7 @@
     <div class="container paragraph-gap" id="regist">
         <div class="row">
             <div class="col p-0">
-                <div class="card" style="border-radius: 10px; width: 540px; margin-left: 370px; margin-top: 70px;  ">
+                <div class="card" style="border-radius: 10px; width: 540px; margin-left: 300px; margin-top: 70px;  ">
                     <div class="content px-4">
                         <div class="fs-3 d-flex justify-content-center mt-5 " style="color: rgb(255, 188, 107)">
                             <h4 class="fw-medium">

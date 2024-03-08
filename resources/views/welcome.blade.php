@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid mt-3">
             <a class="navbar-brand text-light" href="#">
-                <h3 class="fw-medium fs-3">
+                <h3 class="fw-medium fs-3 ms-5">
                     Readify
                 </h3>
             </a>
@@ -44,7 +44,7 @@
     <div class="container-fluid paragraph-gap">
         <div class="d-flex">
             <div class="p-2 flex-grow-1">
-                <div class="header">
+                <div class="header ms-4">
                     <h4>
                         <p class="text-start">
                             Haii, Selamat Datang

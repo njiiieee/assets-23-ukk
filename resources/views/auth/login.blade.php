@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container paragraph-gap">
-        <div class="row" style="margin-top: 10rem; margin-left: 13rem">
+        <div class="row" style="margin-top: 10rem; margin-left: 8rem">
             <div class="col-3 p-0" style="width: 200px">
                 <div class="card" id="card-logo"
                     style="width: 200px; border-radius: 10px; background-color: white; height: 420px">
